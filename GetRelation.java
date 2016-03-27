@@ -21,9 +21,9 @@ public class GetRelation {
         PreparedStatement pst = null;
         ResultSet rs = null;
 
-        String url = "jdbc:mysql://*URL*/*DBName*?useSSL=false";
-        String user = *Your Username*;
-        String password = *Your Password*;
+        String url = "jdbc:mysql://"+ URL +"?useSSL=false";
+        String user = "Your Username";
+        String password = "Your Password";
 
         try {
             
