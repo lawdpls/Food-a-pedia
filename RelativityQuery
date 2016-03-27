@@ -1,0 +1,11 @@
+select tag.* from(
+select r.* from rating r where r.Dish_Id in (select r2.Dish_Id from Rating r2 where
+r2.Customer_Id = '3') and r.R_Id in (select r3.R_Id from Rating r3 where
+r3.Customer_Id = '3') and (r.Customer_Id = '3' or r.Customer_Id = '4'))as tag
+inner join
+(select r.Dish_Id, r.R_Id from rating r where r.Dish_Id in (select r2.Dish_Id from Rating r2 where
+r2.Customer_Id = '3') and r.R_Id in (select r3.R_Id from Rating r3 where
+r3.Customer_Id = '3') and (r.Customer_Id = '3' or r.Customer_Id = '4')
+group by Dish_Id, R_Id
+Having Count(*) > 1) as gag
+on tag.Dish_Id=gag.Dish_Id and tag.R_Id=gag.R_Id;
