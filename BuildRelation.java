@@ -12,33 +12,37 @@ import java.util.logging.Logger;
 
 public class BuildRelation {
 	
-	static HashMap<Integer, Double> relaTable = new HashMap<Integer, Double>();
-	static ArrayList<Integer> others = new ArrayList<Integer>();
-	static int cCount = 0;
-	static int input = 0;
+	public HashMap<Integer, Double> relaTable = new HashMap<Integer, Double>();
+	private ArrayList<Integer> others = new ArrayList<Integer>();
+	private int cCount = 0;
+	private int input;
 	
-    @SuppressWarnings("resource")
-	public static void main(String[] args) {
-
-//      GetRelation test = new GetRelation();
-//    	test.start(1,5);
+//    @SuppressWarnings("resource")
+//	public static void main(String[] args) {
+//
+//    	GetRelation test = new GetRelation();
+//    	test.start(10,11);
 //    	System.out.println(test.relativity);
-    	
-    	Scanner in = new Scanner(System.in);
-    	input = in.nextInt();
-    	BuildRelation build = new BuildRelation();
-    	build.build(input);
+//    	
+//    	Scanner in = new Scanner(System.in);
+//    	input = in.nextInt();
+//    	BuildRelation build = new BuildRelation(input);
+//    }
+    
+    public BuildRelation(int in) {
+    	this.input = in;
+    	build();
     }
     
-    public void build(int in) {
+    public void build() {
     	
     	Connection con = null;
         PreparedStatement pst = null;
         ResultSet rs = null;
 
-        String url = "jdbc:mysql:"URL"?useSSL=false";
-        String user = "Your Username";
-        String password = "Your PW";
+        String url = "jdbc:mysql://127.0.0.1:3306/Fooda?useSSL=false";
+        String user = "root";
+        String password = "rime1990424";
         
         try {
             
@@ -53,17 +57,16 @@ public class BuildRelation {
 //            String colname1 = meta.getColumnName(4);
             for (int i=0; i<cCount; i++) {
             	rs.next();
-            	if (rs.getInt(1) != in) {
+            	if (rs.getInt(1) != input) {
             		others.add(rs.getInt(1));
             	}
             }
             
             for (int i=0; i<others.size(); i++) {
-            	GetRelation test = new GetRelation();
-            	test.start(in, others.get(i));
+            	GetRelation test = new GetRelation(input, others.get(i));
             	relaTable.put(others.get(i), test.relativity);
             }
-            System.out.println(relaTable);
+//            System.out.println(relaTable);
             
             
         } catch (SQLException ex) {

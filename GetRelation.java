@@ -10,40 +10,48 @@ import java.util.logging.Logger;
 
 public class GetRelation {
     
-    public int count = 0;
+    private int count = 0;
     public double relativity = 0;
-    public ArrayList<Integer> u1 = new ArrayList<Integer>();
-    public ArrayList<Integer> u2 = new ArrayList<Integer>();
+    private ArrayList<Integer> u1 = new ArrayList<Integer>();
+    private ArrayList<Integer> u2 = new ArrayList<Integer>();
+    private int in1;
+    private int in2;
+    
+    public GetRelation(int q, int w) {
+    	this.in1 = q;
+    	this.in2 = w;
+    	start();
+    }
     	
-    public void start(int q, int w) {
+    public void start() {
     
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet rs = null;
 
-        String url = "jdbc:mysql:"URL"?useSSL=false";
-        String user = "Your Username";
-        String password = "Your PW";
+        String url = "jdbc:mysql://127.0.0.1:3306/Fooda?useSSL=false";
+        String user = "root";
+        String password = "rime1990424";
 
         try {
             
             con = DriverManager.getConnection(url, user, password);
             pst = con.prepareStatement("select tag.* from(select r.* from rating r where r.Dish_Id in (select r2.Dish_Id from Rating r2 where r2.Customer_Id = "+ 
-            q 
+            in1 
             +") and r.R_Id in (select r3.R_Id from Rating r3 where r3.Customer_Id = "+ 
-            q 
+            in1 
             +") and (r.Customer_Id = "+ 
-            q 
+            in1 
             +" or r.Customer_Id = "+ 
-            w 
+            in2 
             +"))as tag inner join (select r.Dish_Id, r.R_Id from rating r where r.Dish_Id in (select r2.Dish_Id from Rating r2 where r2.Customer_Id = "+ 
-            q 
+            in1 
             +") and r.R_Id in (select r3.R_Id from Rating r3 where r3.Customer_Id = "+ 
-            q 
+            in1 
             +") and (r.Customer_Id = "+ 
-            q 
+            in1 
             +" or r.Customer_Id = "+ 
-            w 
+            in2 
             +") group by Dish_Id, R_Id Having Count(*) > 1) as gag on tag.Dish_Id=gag.Dish_Id and tag.R_Id=gag.R_Id");
             rs = pst.executeQuery();
             count = (rs.last() ? rs.getRow() : 0)/2;
