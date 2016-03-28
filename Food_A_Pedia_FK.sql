@@ -185,7 +185,7 @@ insert into Customer(CustomerAccount,FirstName,LastName,address,City,State, Coun
 insert into Customer(CustomerAccount,FirstName,LastName,address,City,State, Country, PostalCode,phone,Email) values ('rau','Xin','Zheng','19 Lasy','Worcester', 'MA', 'USA', '01609', '7744449182','oals@gmail.com');
 insert into Customer(CustomerAccount,FirstName,LastName,address,City,State, Country, PostalCode,phone,Email) values ('rall','Xing','Liang','29 Lasy','Worcester', 'MA', 'USA', '01609', '7724449182','oass@gmail.com');
 #Dish:
-insert into Dish(Name,Genre) values ('Kongbao Chinken','Chuan Food');
+insert into Dish(Name,Genre) values ('Kongbao Chicken','Chuan Food');
 insert into Dish(Name,Genre) values ('Flavored pork','Chuan Food');
 insert into Dish(Name,Genre) values ('Fish Filets in Hot Chili Oil','Chuan Food');
 insert into Dish(Name,Genre) values ('Steamed barbecued pork buns','Chinese Food');
@@ -205,7 +205,7 @@ insert into Dish(Name,Genre) values ('Salad','Fast Food');
 
 
 #Ingredient:
-insert into Ingredient(name) values ('Checken');
+insert into Ingredient(name) values ('Chicken');
 insert into Ingredient(name) values ('Pepper');
 insert into Ingredient(name) values ('Peanut');
 insert into Ingredient(name) values ('Carrot');
