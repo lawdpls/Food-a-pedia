@@ -149,7 +149,7 @@ INSERT INTO `Restaurant` (`Name`,`Address`, `PhoneNo`,`Dilivery`,`Parking`,`Wi-F
 VALUES ('Dragon Dynasty', '104 Highland St, Worcester', '(508)755-5588','No','Private Lot, Street','No','http://www.dragondynastytakeout.com','11:00am','10:00pm','11:00am','11:00pm');
 
 INSERT INTO `Restaurant` (`Name`,`Address`, `PhoneNo`,`Dilivery`,`Parking`,`Wi-Fi`,`Website`, `MonToFri_OpenHourStart`,`MonToFri_OpenHourEnd`,`SatToSun_OpenHourStart`,`SatToSun_OpenHourEnd`) 
-VALUES ('Thai Time', '107 Highland St, Worcester', '(508)756-7267','Yes','Street','Paid','http://www.thaitimeworcester.com','10:00am','11:00pm','10:00am','12:00am');
+VALUES ('Thai Time', '107 Highland St, Worcester', '(508)756-7267','Yes','Street','Yes','http://www.thaitimeworcester.com','10:00am','11:00pm','10:00am','12:00am');
 
 INSERT INTO `Restaurant` (`Name`,`Address`, `PhoneNo`,`Dilivery`,`Parking`,`Wi-Fi`,`Website`, `MonToFri_OpenHourStart`,`MonToFri_OpenHourEnd`,`SatToSun_OpenHourStart`,`SatToSun_OpenHourEnd`) 
 VALUES ('New England Roast Beef', '33 Park Ave, Worcester', '(508)756-1991','No','Private Lot','No','http://www.eatatnerb.com','10:00am','10:00pm','10:00am','9:00pm');
@@ -158,7 +158,7 @@ INSERT INTO `Restaurant` (`Name`,`Address`, `PhoneNo`,`Dilivery`,`Parking`,`Wi-F
 VALUES ('Figs & Pigs', '50 Foster St, Worcester', '(508)929-0701','Yes','Private Lot, Street','No','http://www.boomerspizzeria.com','10:00am','11:00pm','10:00am','12:00am');
 
 INSERT INTO `Restaurant` (`Name`,`Address`, `PhoneNo`,`Dilivery`,`Parking`,`Wi-Fi`,`Website`, `MonToFri_OpenHourStart`,`MonToFri_OpenHourEnd`,`SatToSun_OpenHourStart`,`SatToSun_OpenHourEnd`) 
-VALUES ('Shawarma Palace', '3 Pleasant St, Worcester', '(508)755-6500','No','Street','Free',Null,'9:00am','7:00pm','10:00am','5:00pm');
+VALUES ('Shawarma Palace', '3 Pleasant St, Worcester', '(508)755-6500','No','Street','Yes',Null,'9:00am','7:00pm','10:00am','5:00pm');
 
 INSERT INTO `Restaurant` (`Name`,`Address`, `PhoneNo`,`Dilivery`,`Parking`,`Wi-Fi`,`Website`, `MonToFri_OpenHourStart`,`MonToFri_OpenHourEnd`,`SatToSun_OpenHourStart`,`SatToSun_OpenHourEnd`) 
 VALUES ('Ernies Pizza', '80 West St, Worcester', '(508)755-3203','Yes','Street','No',Null,'11:00am','2:00am','12:00pm','2:00am');
@@ -170,7 +170,7 @@ INSERT INTO `Restaurant` (`Name`,`Address`, `PhoneNo`,`Dilivery`,`Parking`,`Wi-F
 VALUES ('New Jumbo Seafood Restaurant', '5 Hudson St, Boston', '(617)542-2823', 'No', 'Street', 'No', Null,'11:00am','2:00am','11:00am','2:00am');
 
 INSERT INTO `Restaurant` (`Name`,`Address`, `PhoneNo`,`Dilivery`,`Parking`,`Wi-Fi`,`Website`, `MonToFri_OpenHourStart`,`MonToFri_OpenHourEnd`,`SatToSun_OpenHourStart`,`SatToSun_OpenHourEnd`) 
-VALUES ('The Plough and Stars', '912 Massachusetts Ave, Boston', '(617)576-0032', 'No', 'Street', 'Free', 'http://www.ploughandstars.com','11:30am','1:00am','11:00am','2:00am');
+VALUES ('The Plough and Stars', '912 Massachusetts Ave, Boston', '(617)576-0032', 'No', 'Street', 'Yes', 'http://www.ploughandstars.com','11:30am','1:00am','11:00am','2:00am');
 
 #Customer:
 insert into Customer(CustomerAccount,FirstName,LastName,address,City,State, Country, PostalCode,phone,Email) values ('wendy','Liyan','Huang','34 Wachusett','Worcester', 'MA', 'USA', '01609', '7744440928','hli@gmail.com');
@@ -738,17 +738,17 @@ insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(10,15,1,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(10,15,7,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(10,15,11,3);
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,1,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,1,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,3,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,3,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,4,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,5,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,5,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,6,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,7,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,8,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,9,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,9,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,16,11,1);
 
 
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,15,1,4);
@@ -764,141 +764,141 @@ insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,15,10,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,15,11,4);
 
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,1,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,2,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,3,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,4,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,6,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,7,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,8,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,8,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,9,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,10,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,3,11,1);
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,1,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,1,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,3,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,3,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,4,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,5,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,5,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,6,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,7,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,8,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,8,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,9,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,10,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,7,11,2);
 
 
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,2,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,2,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,4,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,7,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,8,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,9,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,10,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,8,11,5);
 
 
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,2,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,2,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,4,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,7,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,8,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,9,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,9,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,10,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(11,10,11,4);
 
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,2,4);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,2,1);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,3,3);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,5,4);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,5,1);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,7,2);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,9,2);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,4,3);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,4,5);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,1,1);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,6,3);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,6,2);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,8,2);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,11,2);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,11,1);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,11,10,5);
 
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,1,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,1,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,2,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,4,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,6,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,7,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,8,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,9,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,9,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,16,11,5);
 
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,2,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,3,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,4,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,7,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,8,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,7,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,8,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,9,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,10,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,10,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,15,11,4);
 
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,3,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,1,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,2,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,3,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,4,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,6,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,7,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,8,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,9,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,10,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,3,11,1);
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,1,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,2,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,3,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,4,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,7,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,8,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,9,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,7,11,1);
 
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,3,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,1,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,2,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,3,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,4,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,7,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,8,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,9,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,10,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,9,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,10,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,8,11,4);
 
 
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,2,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,2,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,4,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,5,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,4,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,5,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,7,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,8,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,9,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,9,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,10,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(12,10,11,4);
 
@@ -906,26 +906,26 @@ insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,1,3);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,2,3);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,4,4);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,6,3);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,7,3);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,7,5);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,3,3);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,5,3);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,5,5);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,8,4);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,9,3);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,9,1);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,10,3);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12,11,11,1);
 
 
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,1,4);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,1,1);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,3,3);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,5,4);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,6,2);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,9,2);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,2,4);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,2,5);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,4,3);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,7,4);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,7,5);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,8,2);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,10,2);
-insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,11,2);
+insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,12,11,1);
 
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,13,1,5);
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(11,13,3,3);
@@ -942,42 +942,42 @@ insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12, 13, 8,4
 insert into Rating(R_Id,Dish_Id, Customer_Id, CustomerRate) values 	(12, 13, 9,3);
 
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,1,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,1,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,3,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,3,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,4,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,5,5);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,6,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,6,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,7,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,8,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,9,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,9,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,10,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,10,11,4);
 
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,1,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,1,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,3,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,3,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,4,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,7,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,8,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,7,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,8,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,9,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,10,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,7,11,4);
 
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,1,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,2,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,3,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,4,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,7,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,8,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,9,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,10,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,10,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(14,11,11,4);
 
 
@@ -1006,8 +1006,8 @@ insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,10,9,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,10,10,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,10,11,4);
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,2,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,1,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,2,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,3,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,4,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,5,5);
@@ -1016,7 +1016,7 @@ insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,7,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,8,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,9,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(15,8,11,2);
 
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,1,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,2,4);
@@ -1025,45 +1025,45 @@ insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,4,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,6,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,7,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,8,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,9,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,8,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,9,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,10,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(16,8,11,4);
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,1,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,1,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,3,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,3,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,4,4);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,7,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,8,3);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,9,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,9,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,10,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,11,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,8,11,5);
 
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,2,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,2,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,4,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,5,5);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,6,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,7,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,8,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,9,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,10,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,4,11,4);
 
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,1,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,2,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,3,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,4,4);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,1,5);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,2,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,3,1);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,4,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,5,5);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,6,4);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,7,3);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,7,2);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,8,3);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,9,2);
-insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,10,2);
+insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,10,1);
 insert into Rating(Dish_Id,R_Id,Customer_id,CustomerRate) values(17,11,11,4);
 
 
