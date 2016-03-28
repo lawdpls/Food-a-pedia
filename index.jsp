@@ -10,17 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Food-a-pedia</title>
-    
+    <% String ac=(String)session.getAttribute("regi");%>
   	
     	
 	</head>
 	<body>
-	
+	<% if(ac=="true") out.print("Not valid!"); %>
+	<% session.setAttribute("regi","false");%>
 	<form action="Login.jsp" method="post">
 		<label for="name">Name:</label>
 		<input type="text" id="name" name="name"/>
 		<input type="submit" value="Login">
 	</form>
+	
 	
 	
 
