@@ -1,0 +1,4 @@
+select re.name, AVG(ra.CustomerRate) as Rating from Restaurant re, Rating ra, Dish d where d.Dish_Id=1 and d.Dish_Id=ra.Dish_Id and ra.R_Id=
+re.R_Id
+group by re.name
+order by Rating desc;
