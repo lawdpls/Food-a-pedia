@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
  <%@ page import="ss.DishRating" %>
  <%@ page import="java.sql.*" %>
-  <%@ page import="java.util.*" %>
+ <%@ page import="java.util.*" %>
  <%
  	Class.forName("com.mysql.jdbc.Driver");
 	String url="jdbc:mysql://localhost/Chinook?user=root&password=Ma19921013";
@@ -32,11 +32,11 @@
 <title>Relation</title>
 <style>
 
-div{
-	position:relative;
-	margin-top:10%;
-	left:35%;
-}
+  	
+body{
+  	background-image:url("http://www.pepessb.com/img/hero/home.jpg");
+  	background-size: 100%;}
+
 </style>
 </head>
 <body>
@@ -44,7 +44,9 @@ div{
 <div>
 <h1>Search by Recommendation</h1>
 <table border="1px"><tr><th>RESTAURAN_NAME</th><th>RATING</th></tr>
-<%  DishRating dr=new DishRating(cutid,dishid); 
+<%  
+	String input=(String)session.getAttribute("dishname");
+	DishRating dr=new DishRating(cutid,dishid); 
 	HashMap<String,Double> rate=dr.getTable();
 	Set<String> keys = rate.keySet();
 	Iterator<String> iterator = keys.iterator();
@@ -54,11 +56,21 @@ div{
 	    Double rating = rate.get(key);
 	    %><td><%=rating %></td></tr><% 
 	}
+	
+	String sql3="select i.name from Dish d, Cuisine c, Ingredient i where d.name='"+input+"' and d.Dish_Id = c.Dish_Id and c.Ingredient_Id = i.Ingredient_Id;";
+	Statement s3=conn.createStatement();
+	ResultSet rs3=s3.executeQuery(sql3);
+	%><table border="1px" style="margin-top:20px"><tr><td>INGREDIENT_NAME</td></tr><% 
+	while(rs3.next()){
+		%><tr><td><% out.print(rs3.getString(1));
+		%></td></tr><%
+	}
+	%></table><%
 
 	
 %>
 </table>
-
-</body>
 </div>
+</body>
+
 </html>
