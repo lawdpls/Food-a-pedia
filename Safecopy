@@ -1,0 +1,117 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page import="java.io.*,java.util.*,java.sql.*"%>
+    <% //if get name from login page, test if it is exist. Not exist, return to login page.
+   		String name=(String)request.getParameter("name");
+		String act=(String)request.getParameter("action");
+   	 	session.setAttribute("userName",name);
+   	 	Class.forName("com.mysql.jdbc.Driver");
+ 		String url="jdbc:mysql://127.0.0.1:3306/Fooda?user=root&password=rime1990424&useSSL=false";
+	 	Connection conn=DriverManager.getConnection(url);
+	 	Statement s=conn.createStatement(); 
+	 	String deli=(String)request.getParameter("selectm");
+	 	String sql="select CustomerAccount from Customer;";
+	 	ResultSet rs=s.executeQuery(sql);
+	 	boolean reg=false;
+	 	String name2=(String)session.getAttribute("name");
+	 	if(name!=null){
+	 		while(rs.next()){
+	 			if(name.equals(rs.getString(1))) reg=true;
+	 		}
+	 		if(!reg){ 
+	 			session.setAttribute("regi", "true");
+	 			response.sendRedirect("index.jsp"); }
+	 	}else{
+	 		name=name2;
+	 	}
+   	 	
+   		
+%>
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Food-a-pedia</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+		<ul class="actions">
+			<li><a href="#" class="button special icon fa-user"><%=name %></a></li>
+		</ul>
+		<section id="one" class="wrapper special">
+				<div class="inner">
+					<header class="major">
+						<h2>You can search for:</h2>
+					</header>
+					<div class="features">
+						<div class="feature">
+							<i class="fa fa-cutlery"></i>
+							<h3>Restaurants</h3>
+							<p>Get the hottest restaurant information and menu.</p>
+						</div>
+						<div class="feature">
+							<i class="fa fa-coffee"></i>
+							<h3>Genres</h3>
+							<p>Search for places to get your favorite cuisine.</p>
+						</div>
+						<div class="feature">
+							<i class="fa fa-leaf"></i>
+							<h3>Ingredients</h3>
+							<p>Want that special something? Got you covered.</p>
+						</div>
+						<div class="feature">
+							<i class="fa fa-thumbs-o-up"></i>
+							<h3>Dishes</h3>
+							<p>Looking for high quality dishes? Look no more.</p>
+						</div>
+						<div class="feature">
+							<i class="fa fa-thumbs-up"></i>
+							<h3>Personalized rating!</h3>
+							<p>Get your exclusive feedback, tailored just for you!</p>
+						</div>
+					</div>
+				</div>
+			</section>	
+
+<br><hr><br>
+	
+	<form action="Search.jsp" method="post">
+		
+		<div class="6u$ 12u$(small)">
+				<input type="checkbox" id="rec" name="rec" value="rec">
+				<label for="rec">Recommendation based on preference</label>
+		</div>
+
+		<br>
+		<div class="12u$">
+			<div class="select-wrapper">
+				<select name="select" id="select">
+					<option value="">- Category -</option>
+					<option value="res">Restaurant</option>
+					<option value="ing">Ingredient</option>
+					<option value="genre">Genre</option>
+					<option value="dish">Dish</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row uniform">
+			<div class="9u$ 12u$(small)">
+				<input type="text" name="input" id="input" value="" placeholder="Into the world of food" />
+			</div>
+			<div class="3u$ 12u$(small)">
+				<ul class="actions">
+					<li><input type="submit" value="search" /></li>
+					<li><input type="reset" value="Reset" class="alt" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<br><br><br>
+	</form>
+</body>
+</html>
